@@ -4,6 +4,8 @@ import java.util.Random;
 
 public interface radio {
 
+	public static final String encender= "Enciende la radio y escuchamos la emisora: ";
+	
 	public static void escuchar() {
 		Random ran = new Random();
 		int num = ran.nextInt(4) + 1;
@@ -13,7 +15,7 @@ public interface radio {
 		else if (num==2)sintonia="cope";
 		else if (num==3)sintonia="cadena 100";
 		else sintonia="europa FM";
-		System.out.println("Enciende la radio y escuchamos la emisora: " + sintonia);
+		System.out.println(encender + sintonia);
 	}
 	
 }
