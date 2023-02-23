@@ -11,9 +11,12 @@ public class telefonoMovil extends telefono{
 		// TODO Auto-generated constructor stub
 	}
 
-	public telefonoMovil(int llamar, int recibirllamada) {
-		super(llamar, recibirllamada);
+	public telefonoMovil(int numero, int recibirllamada) {
+		super(numero, recibirllamada);
 		// TODO Auto-generated constructor stub
+	}
+	public telefonoMovil(int numero) {
+		super(numero);
 	}
 
 	public String getOperador() {
@@ -21,19 +24,25 @@ public class telefonoMovil extends telefono{
 	}
 
 	private void setOperador() {
-		Random ran = new Random();
-		int num = ran.nextInt(4) + 1;
-		
-		if(num==1)this.operador="Vodafone";
-		else if (num==2)this.operador="Orange";
-		else if (num==3)this.operador="Movistar";
-		else this.operador="Axartel";
+		this.operador=operador;
 	}
 	
-	@Override
-	public int llamar (int num) {
-		System.out.print("Llamando al operador: "+operador+" con numero: ");
+	public static int llamar (int num) {
+		Random ran = new Random();
+		int numRan = ran.nextInt(4) + 1;
+		String operador="";
+		if(numRan==1)operador= "Vodafone";
+		else if (numRan==2)operador= "Orange";
+		else if (numRan==3)operador= "Movistar";
+		else operador= "Axartel";
+		System.out.println("Llamando al operador: "+operador+"\nCon numero: " + num+"\n");
 		return num;
 	}
+
+	@Override
+	public String toString() {
+		return "telefonoMovil [operador=" + getOperador() + ", toString()=" + super.toString() + "]";
+	}
+	
 	
 }

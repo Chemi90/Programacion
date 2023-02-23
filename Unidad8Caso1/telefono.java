@@ -5,22 +5,26 @@ public abstract class telefono {
 	private int numero;
 	private int recibirllamada;
 	
-	public telefono(int llamar, int recibirllamada) {
+	public telefono(int numero, int recibirllamada) {
 		super();
 		this.numero = numero;
 		this.recibirllamada = recibirllamada;
 	}
-
+	
+	public telefono(int numero) {
+		super();
+		this.numero = numero;
+	}
 	public telefono() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getLlamar() {
+	public int getNumero() {
 		return numero;
 	}
 
-	public void setLlamar(int numero) {
+	public void setNumero(int numero) {
 		this.numero = numero;
 	}
 
@@ -32,15 +36,15 @@ public abstract class telefono {
 		this.recibirllamada = recibirllamada;
 	}
 
-	public int llamar (int num) {
-		System.out.print("Llamando al numero: ");
+	public static int llamar (int num) {
+		System.out.println("Llamando al numero: "+num+"\n");
 		return num;
 	}
 	
 	
 	@Override
 	public String toString() {
-		return "telefono [llamar=" + numero + ", recibirllamada=" + recibirllamada + "]";
+		return "telefono [Mi numero es=" + numero+"]";
 	}
 	
 	

@@ -11,5 +11,5 @@ public class movilCamara extends telefonoMovil  implements camara{
 		super(llamar, recibirllamada);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 }
