@@ -12,4 +12,7 @@ public class movilCamara extends telefonoMovil  implements camara{
 		// TODO Auto-generated constructor stub
 	}
 
+	public void sacarFoto() {
+		camara.sacarFoto();
+	}
 }

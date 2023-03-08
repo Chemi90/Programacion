@@ -8,19 +8,24 @@ public class telefonoFijo extends telefono {
 	private String modelo;
 
 	public telefonoFijo() {
-		super();
+		this.marca = "MSE";
+		this.modelo = "7712";
+	}
+	
+	public telefonoFijo(int numero) {
+		super(numero);
 		// TODO Auto-generated constructor stub
 	}
 
 	public telefonoFijo(int numero, int recibirllamada, String marca, String modelo) {
 		super(numero, recibirllamada);
-		this.marca = marca;
+		this.setMarca(marca);
 		this.modelo = modelo;
 	}
 
 	public telefonoFijo(int numero, String marca, String modelo) {
 		super(numero);
-		this.marca = marca;
+		this.setMarca(marca);
 		this.modelo = modelo;
 	}
 
@@ -58,13 +63,19 @@ public class telefonoFijo extends telefono {
 			marca = "Motorola";
 		else
 			marca = "Nokia";
-		System.out.println("Llamando al numero " + num + "\n" + "Con marca " + marca + "\n" + "Con modelo: " + modelo);
+		System.out.println("Llamando al numero " + num + "\n" + "Con marca " + marca + "\n" + "Con modelo: " + modelo
+				+"\n");
 		return num;
 	}
 
 	@Override
 	public String toString() {
-		return "telefonoFijo [marca=" + marca + ", modelo=" + modelo + ", toString()=" + super.toString() + "]";
+		return "telefonoFijo [marca=" + getMarca() + ", modelo=" + modelo + ", toString()=" + super.toString() + "]";
+	}
+
+	public String setMarca(String marca) {
+		this.marca = marca;
+		return marca;
 	}
 
 }

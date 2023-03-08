@@ -12,4 +12,7 @@ public class movilRadio extends telefonoMovil implements radio{
 		// TODO Auto-generated constructor stub
 	}
 	
+	public void escuchar() {
+		radio.escuchar();
+	}
 }
